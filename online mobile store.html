@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> athul's MobileMart - Online Mobile Store</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0d6efd;
+      padding: 20px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 200px;
+    }
+
+    /* Banner */
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Welcome Section */
+    .welcome {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .welcome h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .gallery-item {
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item:nth-child(1) {
+      background-image: url('https://tse4.mm.bing.net/th/id/OIP.zYpRLiyjqCSJRko8d6eNjAHaJF?rs=1&pid=ImgDetMain&o=7&rm=3');
+    }
+
+    .gallery-item:nth-child(2) {
+      background-image: url('https://cdn.mos.cms.futurecdn.net/bi2fE37yffyQnsVLKB6mxB-1920-80.jpg');
+    }
+
+    .gallery-item:nth-child(3) {
+      background-image: url('https://tse1.mm.bing.net/th/id/OIP.N0c8v9ZCyr9A-Ym18Rp9ZwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3');
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Content Sections */
+    .content {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .content-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .content-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .content-block img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-block {
+        flex-direction: column;
+      }
+
+      .content-block.reverse {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> athul's MobileMart</h1>
+    <input type="text" placeholder="Search phones..." />
+  </header>
+
+  <section class="banner">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.e535VguWu0oe-epEMjEzDQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="athul's Mobile Store Banner" />
+  </section>
+
+  <section class="welcome">
+    <h2>Welcome to MobileMart</h2>
+    <p>Your one-stop destination for the latest smartphones, accessories, and unbeatable deals. Explore top brands and discover your next mobile companion today!</p>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <div class="caption">iPhone 14 Pro</div>
+    </div>
+    <div class="gallery-item">
+      <div class="caption">Samsung Galaxy S23</div>
+    </div>
+    <div class="gallery-item">
+      <div class="caption">OnePlus 11</div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="content-block">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.KPc0Mczlg4TFwqkJXzG4YAHaE7?w=1200&h=799&rs=1&pid=ImgDetMain&o=7&rm=3" alt="iPhone" />
+      <div class="text">
+        <h3>Apple iPhone Series</h3>
+        <p>Experience innovation with the latest iPhones featuring powerful chips and stunning displays.</p>
+      </div>
+    </div>
+    <div class="content-block reverse">
+      <img src="data:image/webp;base64,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" alt="Samsung" />
+      <div class="text">
+        <h3>Samsung Galaxy Series</h3>
+        <p>Discover cutting-edge technology and sleek design with Samsung's flagship models.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 athul's MobileMart. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
